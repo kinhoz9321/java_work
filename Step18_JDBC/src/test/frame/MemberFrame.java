@@ -36,9 +36,9 @@ public class MemberFrame extends JFrame
 		setLayout(new BorderLayout());
 		//상단 페널
 		JPanel topPanel=new JPanel();
-		topPanel.setBackground(Color.YELLOW);
+		topPanel.setBackground(Color.PINK);
 		//페널을 상단에 배치하기 
-		add(topPanel, BorderLayout.NORTH);
+		add(topPanel, BorderLayout.SOUTH);
 		//페널에 추가할 UI 객체를 생성해서 
 		JLabel label_name=new JLabel("이름");
 		JLabel label_addr=new JLabel("주소");

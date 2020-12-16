@@ -60,11 +60,11 @@ public class ClientFrame extends JFrame
 		
 		//페널을 만들어서 프레임의 위쪽에 배치하기 
 		JPanel topPanel=new JPanel();
-		topPanel.setBackground(Color.YELLOW);
+		topPanel.setBackground(Color.PINK);
 		add(topPanel, BorderLayout.SOUTH);
 		
 		//프레임에 UI 배치하기
-		tf=new JTextField(10);
+		tf=new JTextField(20);
 		JButton sendBtn=new JButton("Send");
 		topPanel.add(tf);
 		topPanel.add(sendBtn);
@@ -85,7 +85,7 @@ public class ClientFrame extends JFrame
 		
 		//참여자 목록을 출력할 준비
 		jList=new JList<>();
-		jList.setBackground(Color.GREEN);
+		jList.setBackground(Color.PINK);
 		
 		JPanel rightPanel=new JPanel();
 		rightPanel.add(jList);
@@ -106,7 +106,7 @@ public class ClientFrame extends JFrame
 		//프레임객체 생성하면서 프레임의 제목을 chatting 으로 지정하기 
 		ClientFrame f=new ClientFrame("chatting");
 		//프레임의 x좌표, y좌표, width, height 설정하기
-		f.setBounds(100, 100, 500, 500);
+		f.setBounds(700, 200, 500, 500);
 		//프레임을 닫을때 프로세스도 종료 되도록 한다. 
 		f.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		//프레임을 화면상에 보이게 하기 

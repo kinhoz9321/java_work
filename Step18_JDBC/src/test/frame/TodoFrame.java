@@ -36,7 +36,7 @@ public class TodoFrame extends JFrame implements ActionListener,PropertyChangeLi
 		setLayout(new BorderLayout());
 		//상단 페널
 		JPanel topPanel=new JPanel();
-		topPanel.setBackground(Color.YELLOW);
+		topPanel.setBackground(Color.PINK);
 		//페널을 상단에 배치하기 
 		add(topPanel, BorderLayout.NORTH);
 		//페널에 추가할 UI 객체를 생성해서 
@@ -56,7 +56,7 @@ public class TodoFrame extends JFrame implements ActionListener,PropertyChangeLi
 		//회원 목록을 출력할 테이블
 		table=new JTable();
 		//칼럼명을 String[] 에 순서대로 준비하기
-		String[] colNames= {"번호","내용","날짜"};
+		String[] colNames= {"번호","할 일","날짜"};
 		//테이블에 연결할 기본 모델 객체
 		model=new DefaultTableModel(colNames, 0) {
 			@Override
@@ -158,12 +158,13 @@ public class TodoFrame extends JFrame implements ActionListener,PropertyChangeLi
 		boolean isSuccess=dao.insert(dto);
 		//실제 저장되었는지 확인해 보세요.
 		if(isSuccess) {
-			JOptionPane.showMessageDialog(this, "추가성공");
+			JOptionPane.showMessageDialog(this, "할 일 추가 성공!");
 			//테이블에 다시 목록 불러오기
 			printTodo();
 		}else {
 			JOptionPane.showMessageDialog(this, "추가 실패!");
 		}
+		text_content.setText("");
 	}
 		
 	//ActionListener 메소드 재정의
