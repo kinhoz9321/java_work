@@ -11,7 +11,7 @@ public class DBConnect {
 		try {
 			//드라이버 로딩
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//접속할 DB 정보
+			//접속할 DB 정보 1521 포트번호
 			String url="jdbc:oracle:thin:@14.63.164.99:1521:xe";
 			//String url="jdbc:oracle:thin:@localhost:1521:xe";
 			//접속하고 Connection 객체의 참조값 얻어오기
